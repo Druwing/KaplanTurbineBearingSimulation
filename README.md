@@ -2,7 +2,7 @@
 
 ## Modelo escolhido
 
-O script `simulacao_rul_bucha_oscilante_kaplan.py` representa uma **bucha de deslizamento oscilante no pivô/trunnion de uma pá do rotor Kaplan**. Essa é uma hipótese plausível para estudar atrito e desgaste no cubo; não é uma identificação confirmada do material ou do modelo de mancal das duas turbinas do dataset.
+O script representa uma **bucha de deslizamento oscilante no pivô/trunnion de uma pá do rotor Kaplan**. Essa é uma hipótese plausível para estudar atrito e desgaste no cubo; não é uma identificação confirmada do material ou do modelo de mancal das duas turbinas do dataset.
 
 O desgaste usa a forma de Archard:
 
@@ -27,7 +27,7 @@ Dependências: Python 3, `numpy` e `pandas`.
 
 ```bash
 pip install numpy pandas
-python simulacao_rul_bucha_oscilante_kaplan.py \
+python main.py \
   --zip kaplan_dataset.zip \
   --out saidas_bucha \
   --turbines Turbine_1 Turbine_2 \
@@ -40,7 +40,7 @@ O ZIP é baixado da fonte oficial se não estiver no caminho indicado. Para reso
 
 ```python
 !pip install -q numpy pandas
-!python /content/simulacao_rul_bucha_oscilante_kaplan.py \
+!python /content/main.py \
   --zip /content/kaplan_dataset.zip \
   --out /content/saidas_bucha \
   --stride 15 --scenarios 3 --nominal-life-days 365
@@ -49,7 +49,7 @@ O ZIP é baixado da fonte oficial se não estiver no caminho indicado. Para reso
 Os números do exemplo abaixo apenas demonstram a sintaxe. **Não são especificações Kaplan publicadas**:
 
 ```bash
-python simulacao_rul_bucha_oscilante_kaplan.py \
+python main.py \
   --zip kaplan_dataset.zip --out saidas_exemplo \
   --turbines Turbine_1 --stride 15 --scenarios 3 \
   --nominal-life-days 365 \
